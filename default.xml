@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="https://android.googlesource.com/" name="aosp" review="https://android-review.googlesource.com/"/>
-  <remote fetch="https://github.com/mer-hybris/" name="hybris" revision="master"/>
-  <remote fetch="https://github.com/krnlyng/" name="krnlyng"/>
-  <remote fetch="https://github.com/mer-hybris/" name="hybris-patches" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
   <remote fetch="https://github.com/NXPNFCProject/" name="NXP"/>
   <remote fetch="https://github.com/sonyxperiadev/" name="sony"/>
-  
+  <remote fetch="https://github.com/mer-hybris/" name="hybris-patches" revision="droid-src-sony-aosp-8.1.0_r35_20180714"/>
+  <remote fetch="https://github.com/mer-hybris/" name="hybris" revision="master"/>
+
   <default remote="aosp" revision="refs/tags/android-8.1.0_r35" sync-j="4"/>
 
-  <project name="device-sony-nile" path="device/sony/nile" remote="hybris-patches" revision="hybris-sony-aosp-8.1.0_r35_20180714" />
-  <project name="android_kernel_sony_msm" path="kernel/sony/msm-4.4/kernel" remote="hybris-patches" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
   <project name="droid-src-sony-nile" path="rpm" remote="hybris" revision="master"/>
-
-  <project name="platform/frameworks/av" path="frameworks/av" revision="refs/tags/android-8.1.0_r35"/>
-  <project name="platform/frameworks/native" remote="aosp" path="frameworks/native" revision="refs/tags/android-8.1.0_r35"/>
-  <project name="platform/hardware/libhardware" path="hardware/libhardware" revision="refs/tags/android-8.1.0_r35"/>
-  <project name="platform/system/core" path="system/core" revision="refs/tags/android-8.1.0_r35"/>
-  <project name="android_bionic" path="bionic" remote="hybris-patches" revision="droid-src-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="platform/build" path="build/make" revision="refs/tags/android-8.1.0_r35">
-    <copyfile dest="Makefile" src="core/root.mk"/>
-    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
-    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default"/>
-    <linkfile dest="build/core" src="core"/>
-    <linkfile dest="build/envsetup.sh" src="envsetup.sh"/>
-    <linkfile dest="build/target" src="target"/>
-    <linkfile dest="build/tools" src="tools"/>
-  </project>
 
   <project name="NXPNFCC_FW" path="vendor/nxp/NXPNFCC_FW" remote="NXP" revision="master"/>
   <project name="camera" path="vendor/qcom/opensource/camera" remote="sony" revision="aosp/LA.UM.6.4.r1"/>
@@ -43,6 +25,7 @@
   <project name="device-sony-lilac" path="device/sony/lilac" remote="sony" revision="o-mr1"/>
   <project name="device-sony-loire" path="device/sony/loire" remote="sony" revision="o-mr1"/>
   <project name="device-sony-maple" path="device/sony/maple" remote="sony" revision="o-mr1"/>
+  <project name="device-sony-nile" path="device/sony/nile" remote="hybris-patches" revision="droid-src-sony-aosp-8.1.0_r35_20180714"/>
   <project name="device-sony-pioneer" path="device/sony/pioneer" remote="sony" revision="o-mr1"/>
   <project name="device-sony-poplar" path="device/sony/poplar" remote="sony" revision="o-mr1"/>
   <project name="device-sony-sepolicy" path="device/sony/sepolicy" remote="sony" revision="o-mr1"/>
@@ -60,15 +43,25 @@
   <project clone-depth="1" name="device/google/vrservices"/>
   <project name="device/google/wahoo"/>
   <project name="device/sample"/>
-  <project path="hardware/qcom/bootctrl" name="platform/hardware/qcom/bootctrl" remote="aosp" />
-  <project path="hardware/qcom/display/sde" name="hardware-qcom-display" remote="sony" revision="aosp/LA.UM.6.3.r1" />
+  <project name="hardware-qcom-display" path="hardware/qcom/display/sde" remote="sony" revision="aosp/LA.UM.6.3.r1"/>
   <project name="hardware-qcom-wlan" path="vendor/qcom/opensource/wlan" remote="sony" revision="master"/>
+  <project name="kernel" path="kernel/sony/msm-4.4/kernel" remote="sony" revision="aosp/LA.UM.6.4.r1"/>
   <project name="kernel/tests"/>
   <project name="macaddrsetup" path="vendor/oss/macaddrsetup" remote="sony" revision="master"/>
   <project name="packages-apps-FMRadio" path="packages/apps/FMRadio" remote="sony" revision="master"/>
   <project name="packages_apps_ExtendedSettings" path="packages/apps/ExtendedSettings" remote="sony" revision="master"/>
   <project name="platform/art" path="art"/>
-  <project name="android_bootable_recovery" remote="hybris-patches" path="bootable/recovery" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_bionic" remote="hybris-patches" path="bionic"/>
+  <project name="platform/bootable/recovery" path="bootable/recovery"/>
+  <project name="platform/build" path="build/make">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default"/>
+    <linkfile dest="build/core" src="core"/>
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh"/>
+    <linkfile dest="build/target" src="target"/>
+    <linkfile dest="build/tools" src="tools"/>
+  </project>
   <project name="platform/build/blueprint" path="build/blueprint"/>
   <project name="platform/build/kati" path="build/kati"/>
   <project name="platform/build/soong" path="build/soong">
@@ -355,7 +348,8 @@
   <project name="platform/external/zlib" path="external/zlib"/>
   <project name="platform/external/zopfli" path="external/zopfli"/>
   <project name="platform/external/zxing" path="external/zxing"/>
-  <project name="platform/frameworks/base" path="frameworks/base"/>
+  <project name="android_frameworks_av" remote="hybris-patches" path="frameworks/av"/>
+  <project name="android_frameworks_base" remote="hybris-patches" path="frameworks/base"/>
   <project name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc"/>
   <project name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker"/>
   <project name="platform/frameworks/compile/slang" path="frameworks/compile/slang"/>
@@ -366,6 +360,7 @@
   <project name="platform/frameworks/minikin" path="frameworks/minikin"/>
   <project name="platform/frameworks/ml" path="frameworks/ml"/>
   <project name="platform/frameworks/multidex" path="frameworks/multidex"/>
+  <project name="platform/frameworks/native" path="frameworks/native"/>
   <project name="platform/frameworks/opt/bitmap" path="frameworks/opt/bitmap"/>
   <project name="platform/frameworks/opt/bluetooth" path="frameworks/opt/bluetooth"/>
   <project name="platform/frameworks/opt/calendar" path="frameworks/opt/calendar"/>
@@ -395,14 +390,16 @@
   <project name="platform/hardware/google/easel" path="hardware/google/easel"/>
   <project name="platform/hardware/interfaces" path="hardware/interfaces"/>
   <project name="platform/hardware/invensense" path="hardware/invensense"/>
+  <project name="platform/hardware/libhardware" path="hardware/libhardware"/>
   <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy"/>
-  <project name="android_hardware_qcom_audio" remote="hybris-patches" path="hardware/qcom/audio" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="android_hardware_qcom_bt" remote="hybris-patches" path="hardware/qcom/bt" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_hardware_qcom_audio" remote="hybris-patches" path="hardware/qcom/audio"/>
+  <project name="android_hardware_qcom_bootctrl" remote="hybris-patches" path="hardware/qcom/bootctrl"/>
+  <project name="android_hardware_qcom_bt" remote="hybris-patches" path="hardware/qcom/bt"/>
   <project name="platform/hardware/qcom/data/ipacfg-mgr" path="hardware/qcom/data/ipacfg-mgr"/>
-  <project name="android_hardware_qcom_display" remote="hybris-patches" path="hardware/qcom/display" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="android_hardware_qcom_gps" remote="hybris-patches" path="hardware/qcom/gps" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_hardware_qcom_display" remote="hybris-patches" path="hardware/qcom/display"/>
+  <project name="android_hardware_qcom_gps" remote="hybris-patches" path="hardware/qcom/gps"/>
   <project name="platform/hardware/qcom/keymaster" path="hardware/qcom/keymaster"/>
-  <project name="android_hardware_qcom_media" remote="hybris-patches" path="hardware/qcom/media" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_hardware_qcom_media" remote="hybris-patches" path="hardware/qcom/media"/>
   <project name="platform/hardware/qcom/msm8998" path="hardware/qcom/msm8998"/>
   <project name="platform/hardware/qcom/power" path="hardware/qcom/power"/>
   <project name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan"/>
@@ -504,9 +501,16 @@
   <project clone-depth="1" name="platform/prebuilts/build-tools" path="prebuilts/build-tools"/>
   <project clone-depth="1" name="platform/prebuilts/checkcolor" path="prebuilts/checkcolor"/>
   <project clone-depth="1" name="platform/prebuilts/checkstyle" path="prebuilts/checkstyle"/>
+  <project clone-depth="1" name="platform/prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86"/>
   <project clone-depth="1" name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86"/>
   <project name="platform/prebuilts/deqp" path="prebuilts/deqp"/>
   <project clone-depth="1" name="platform/prebuilts/devtools" path="prebuilts/devtools"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" path="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"/>
@@ -515,7 +519,9 @@
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9"/>
+  <project clone-depth="1" name="platform/prebuilts/gdb/darwin-x86" path="prebuilts/gdb/darwin-x86"/>
   <project clone-depth="1" name="platform/prebuilts/gdb/linux-x86" path="prebuilts/gdb/linux-x86"/>
+  <project clone-depth="1" name="platform/prebuilts/go/darwin-x86" path="prebuilts/go/darwin-x86"/>
   <project clone-depth="1" name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86"/>
   <project clone-depth="1" name="platform/prebuilts/gradle-plugin" path="prebuilts/gradle-plugin"/>
   <project clone-depth="1" name="platform/prebuilts/jdk/jdk8" path="prebuilts/jdk/jdk8"/>
@@ -524,6 +530,7 @@
   <project clone-depth="1" name="platform/prebuilts/maven_repo/bumptech" path="prebuilts/maven_repo/bumptech"/>
   <project clone-depth="1" name="platform/prebuilts/misc" path="prebuilts/misc"/>
   <project clone-depth="1" name="platform/prebuilts/ndk" path="prebuilts/ndk"/>
+  <project clone-depth="1" name="platform/prebuilts/python/darwin-x86/2.7.5" path="prebuilts/python/darwin-x86/2.7.5"/>
   <project clone-depth="1" name="platform/prebuilts/python/linux-x86/2.7.5" path="prebuilts/python/linux-x86/2.7.5"/>
   <project clone-depth="1" name="platform/prebuilts/sdk" path="prebuilts/sdk"/>
   <project clone-depth="1" name="platform/prebuilts/tools" path="prebuilts/tools"/>
@@ -533,6 +540,7 @@
   <project name="platform/system/chre" path="system/chre"/>
   <project name="platform/system/connectivity/wificond" path="system/connectivity/wificond"/>
   <project name="platform/system/connectivity/wifilogd" path="system/connectivity/wifilogd"/>
+  <project name="android_system_core" remote="hybris-patches" path="system/core"/>
   <project name="platform/system/extras" path="system/extras"/>
   <project name="platform/system/gatekeeper" path="system/gatekeeper"/>
   <project name="platform/system/hardware/interfaces" path="system/hardware/interfaces"/>
@@ -545,7 +553,7 @@
   <project name="platform/system/libvintf" path="system/libvintf"/>
   <project name="platform/system/media" path="system/media"/>
   <project name="platform/system/netd" path="system/netd"/>
-  <project name="android_system_nfc" remote="hybris-patches" path="system/nfc" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_system_nfc" remote="hybris-patches" path="system/nfc"/>
   <project name="platform/system/nvram" path="system/nvram"/>
   <project name="platform/system/security" path="system/security"/>
   <project name="platform/system/sepolicy" path="system/sepolicy"/>
@@ -554,7 +562,7 @@
   <project name="platform/system/tools/hidl" path="system/tools/hidl"/>
   <project name="platform/system/tpm" path="system/tpm"/>
   <project name="platform/system/update_engine" path="system/update_engine"/>
-  <project name="platform/system/vold" path="system/vold"/>
+  <project name="android_system_vold" remote="hybris-patches" path="system/vold"/>
   <project name="platform/test/framework" path="test/framework"/>
   <project name="platform/test/sts" path="test/sts"/>
   <project name="platform/test/vts" path="test/vts"/>
@@ -585,14 +593,15 @@
   <project name="vendor-broadcom-wlan" path="vendor/broadcom/wlan" remote="sony" revision="master"/>
   <project name="vendor-nxp" path="vendor/nxp/" remote="sony" revision="master"/>
   <project name="vendor-qcom-opensource-dataservices" path="vendor/qcom/opensource/dataservices" remote="sony" revision="master"/>
-  <project path="vendor/qcom/opensource/interfaces" name="vendor-qcom-opensource-interfaces" remote="sony" revision="aosp/LA.UM.6.3.r1" >
-    <copyfile dest="vendor/qcom/opensource/Android.bp" src="os_pickup.bp" />
-  </project>
   <project name="vendor-qcom-opensource-fm" path="vendor/qcom/opensource/fm" remote="sony" revision="master"/>
+  <project name="vendor-qcom-opensource-interfaces" path="vendor/qcom/opensource/interfaces" remote="sony" revision="aosp/LA.UM.6.3.r1">
+    <copyfile dest="vendor/qcom/opensource/Android.bp" src="os_pickup.bp"/>
+  </project>
   <project name="vendor-qcom-opensource-location" path="vendor/qcom/opensource/location" remote="sony" revision="o-mr1"/>
   <project name="vendor-qcom-opensource-wlan-fw-api" path="kernel/sony/msm-4.4/kernel/drivers/staging/wlan-qc/fw-api" remote="sony" revision="aosp/LA.UM.6.4.r1"/>
   <project name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" path="kernel/sony/msm-4.4/kernel/drivers/staging/wlan-qc/qca-wifi-host-cmn" remote="sony" revision="aosp/LA.UM.6.4.r1"/>
   <project name="vendor-qcom-opensource-wlan-qcacld-3.0" path="kernel/sony/msm-4.4/kernel/drivers/staging/wlan-qc/qcacld-3.0" remote="sony" revision="aosp/LA.UM.6.4.r1"/>
+  <project clone-depth="1" name="kernel" path="kernel/sony/msm-4.4/common-kernel" remote="sony" revision="aosp/LA.UM.6.4.r1"/>
   <project name="vendor-sony-oss-cash" path="vendor/oss/cash" remote="sony" revision="master"/>
   <project name="vendor-sony-oss-fingerprint" path="vendor/oss/fingerprint" remote="sony" revision="master"/>
   <project name="vendor-sony-oss-projection" path="vendor/oss/projection" remote="sony" revision="master"/>

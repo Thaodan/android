@@ -1,42 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="https://github.com/NXPNFCProject/" name="NXP"/>
   <remote fetch="https://android.googlesource.com/" name="aosp" review="https://android-review.googlesource.com/"/>
-  <remote fetch="https://github.com/mer-hybris/" name="hybris" revision="master"/>
-  <remote fetch="https://github.com/mer-hybris/" name="hybris-patches" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <remote fetch="https://github.com/krnlyng/" name="krnlyng"/>
+  <remote fetch="https://github.com/NXPNFCProject/" name="NXP"/>
   <remote fetch="https://github.com/sonyxperiadev/" name="sony"/>
-  
+  <remote fetch="https://github.com/mer-hybris/" name="hybris-patches" revision="droid-src-sony-aosp-8.1.0_r35_20180714"/>
+  <remote fetch="https://github.com/mer-hybris/" name="hybris" revision="master"/>
+
   <default remote="aosp" revision="refs/tags/android-8.1.0_r35" sync-j="4"/>
+
+  <project name="droid-src-sony-nile" path="rpm" remote="hybris" revision="1ffb615ba9232d797a9b5de7674aae84ffa8645b" upstream="master"/>
   
   <project name="NXPNFCC_FW" path="vendor/nxp/NXPNFCC_FW" remote="NXP" revision="5ce2ae047abc44c1547d6ceebaa22c58ae1bd477" upstream="master"/>
-  <project name="android_bootable_recovery" path="bootable/recovery" remote="hybris-patches" revision="3c6a8d9187b92257bb28939bf9474865f30846f7" upstream="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="android_hardware_qcom_audio" path="hardware/qcom/audio" remote="hybris-patches" revision="0465b4d34b2fd675a2f411c5a57d38b141bd0212" upstream="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="android_hardware_qcom_bt" path="hardware/qcom/bt" remote="hybris-patches" revision="90b1ad44312537de1029c87c7df011af1376f523" upstream="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="android_hardware_qcom_display" path="hardware/qcom/display" remote="hybris-patches" revision="d3779468c4821b0914c5d67088577b5874a3633e" upstream="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="android_hardware_qcom_gps" path="hardware/qcom/gps" remote="hybris-patches" revision="663dbe453987314ac5831efd07897b3e929d8023" upstream="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="android_hardware_qcom_media" path="hardware/qcom/media" remote="hybris-patches" revision="e01e032feb6df056104beda1cf682afb5ef98a2f" upstream="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="android_kernel_sony_msm" path="kernel/sony/msm-4.4/kernel" remote="hybris-patches" revision="bf390d946d07107ba0a62f00ba3270dd3e93af92" upstream="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="android_system_nfc" path="system/nfc" remote="hybris-patches" revision="0e036edb77546f74a2c7eea9c5506415cb1dde2e" upstream="hybris-sony-aosp-8.1.0_r35_20180714"/>
   <project name="camera" path="vendor/qcom/opensource/camera" remote="sony" revision="dc9af5d36009caa60b9b01a256a7f8ce4c1897f1" upstream="aosp/LA.UM.6.4.r1"/>
   <project name="device-sony-akari" path="device/sony/akari" remote="sony" revision="160df5bbfa289453c519f8c7b8f27bfee82c767f" upstream="o-mr1"/>
   <project name="device-sony-apollo" path="device/sony/apollo" remote="sony" revision="c3f670d59069ed7d7b0bc2d1ea04550dccd8e05e" upstream="o-mr1"/>
-  <project name="device-sony-blanc" path="device/sony/blanc" remote="sony" revision="0109896e68d197c34e6bf64a156c1288d9cfdadc" upstream="o-mr1"/>
-  <project name="device-sony-common" path="device/sony/common" remote="sony" revision="62bace1f538c0e51d6a34573311df82c685ea13d" upstream="o-mr1"/>
+  <project name="device-sony-blanc" path="device/sony/blanc" remote="sony" revision="c42041ee34bd841eb10930bef179b8b80744b530" upstream="o-mr1"/>
+  <project name="device-sony-common" path="device/sony/common" remote="sony" revision="8ffd163911a0e37559ca28bcd9febad806ee1aa9" upstream="o-mr1"/>
   <project name="device-sony-common-headers" path="kernel/sony/msm-4.4/common-headers" remote="sony" revision="c7e52e0c6cedf83c15d938688365d0a6b6bbd3fe" upstream="aosp/LA.UM.6.4.r1"/>
-  <project name="device-sony-discovery" path="device/sony/discovery" remote="sony" revision="ad6cadc3ab865651a28fb4a67d726c2287697966" upstream="o-mr1"/>
-  <project name="device-sony-dora" path="device/sony/dora" remote="sony" revision="b0b27e3effe6a107560327cf38bf654b61eeedee" upstream="o-mr1"/>
-  <project name="device-sony-kagura" path="device/sony/kagura" remote="sony" revision="4d36d6c043f4c4817e949d56331975a96f335ab9" upstream="o-mr1"/>
+  <project name="device-sony-discovery" path="device/sony/discovery" remote="sony" revision="586be30b932e8ef8a6b3b2c1ae5cae92f91938d6" upstream="o-mr1"/>
+  <project name="device-sony-dora" path="device/sony/dora" remote="sony" revision="5a035f4fe4d26880df3f80ee08c86f423daae8b4" upstream="o-mr1"/>
+  <project name="device-sony-kagura" path="device/sony/kagura" remote="sony" revision="7b5210cd4f990f567e0443261776fb09e96ee415" upstream="o-mr1"/>
   <project name="device-sony-keyaki" path="device/sony/keyaki" remote="sony" revision="00dcbdd8f0b8a13e6a83b27f64ff403b72839b95" upstream="o-mr1"/>
-  <project name="device-sony-kugo" path="device/sony/kugo" remote="sony" revision="e75a1e0638d299814bfe12986a21105dc7cdf56d" upstream="o-mr1"/>
+  <project name="device-sony-kugo" path="device/sony/kugo" remote="sony" revision="4364bdd2f297072550ea9a626176ca7ec367ede9" upstream="o-mr1"/>
   <project name="device-sony-lilac" path="device/sony/lilac" remote="sony" revision="93f5cac07ecc294d14366828bf15e28e3db3126c" upstream="o-mr1"/>
-  <project name="device-sony-loire" path="device/sony/loire" remote="sony" revision="ae59be76a7202b5c322ab06e04b81a1c5369786a" upstream="o-mr1"/>
+  <project name="device-sony-loire" path="device/sony/loire" remote="sony" revision="54d5fc5780337067bd9201fb2a31bc47729167e2" upstream="o-mr1"/>
   <project name="device-sony-maple" path="device/sony/maple" remote="sony" revision="b5356bc08b9846e45985c9405e36bd0f81909adf" upstream="o-mr1"/>
-  <project name="device-sony-nile" path="device/sony/nile" remote="hybris-patches" revision="1150ee8b70e1db22521cb9d5927055d1887b50aa" upstream="hybris-sony-aosp-8.1.0_r35_20180714"/>
-  <project name="device-sony-pioneer" path="device/sony/pioneer" remote="sony" revision="cffabc89f4988eaeb32dfb79566a949e861203e1" upstream="o-mr1"/>
+  <project name="device-sony-nile" path="device/sony/nile" remote="hybris-patches" revision="8325928527e5aa58ab1ca0d5ac7fbbd5b209f12e" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="device-sony-pioneer" path="device/sony/pioneer" remote="sony" revision="4febaadcbb95eb2a8398080c1b534a01fa22e277" upstream="o-mr1"/>
   <project name="device-sony-poplar" path="device/sony/poplar" remote="sony" revision="2e694b40dab5b9daca5bd237a6e9535d7b5b945d" upstream="o-mr1"/>
   <project name="device-sony-sepolicy" path="device/sony/sepolicy" remote="sony" revision="38a32428446ff52965c21d58c99d03b2493eb0bc" upstream="o-mr1"/>
-  <project name="device-sony-suzu" path="device/sony/suzu" remote="sony" revision="2b71488da806a113d97694ade10e0a71b4db4337" upstream="o-mr1"/>
+  <project name="device-sony-suzu" path="device/sony/suzu" remote="sony" revision="cefb58f43d20ed7b58103c7a521e27b08b195444" upstream="o-mr1"/>
   <project name="device-sony-tama" path="device/sony/tama" remote="sony" revision="c2d8741eb595fd31e2a0b05e9da76c4bb4f202aa" upstream="o-mr1"/>
   <project name="device-sony-tone" path="device/sony/tone" remote="sony" revision="d2f623158c7d1896c3464d9d3e2c84eab40c8514" upstream="o-mr1"/>
   <project name="device-sony-yoshino" path="device/sony/yoshino" remote="sony" revision="6eae7bc81e6767bf7cddedfb456fd17c693d408a" upstream="o-mr1"/>
@@ -50,15 +43,16 @@
   <project clone-depth="1" name="device/google/vrservices" revision="b290ba549b38447937773e3698e4678015550684" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="device/google/wahoo" revision="e9e17ed4e99b168e8ce7a999b22bde4ffb32fcc7" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="device/sample" revision="509608c76570d623c05952c8eecdc2868ca8a952" upstream="refs/tags/android-8.1.0_r35"/>
-  <project name="droid-src-sony-nile" path="rpm" remote="hybris" revision="1ffb615ba9232d797a9b5de7674aae84ffa8645b" upstream="master"/>
   <project name="hardware-qcom-display" path="hardware/qcom/display/sde" remote="sony" revision="e63f75021d59ad0e922f5fafe740ab9e7eff707b" upstream="aosp/LA.UM.6.3.r1"/>
   <project name="hardware-qcom-wlan" path="vendor/qcom/opensource/wlan" remote="sony" revision="d8a7fe7303cdc5f1087a186cd95388c979fc4dad" upstream="master"/>
+  <project name="kernel" path="kernel/sony/msm-4.4/kernel" remote="sony" revision="e8c10776b71b1301710436d31bac8e099073cf62" upstream="aosp/LA.UM.6.4.r1"/>
   <project name="kernel/tests" revision="fa4729e5d6aeba19cc9ea0b3cbd4eb085865beda" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="macaddrsetup" path="vendor/oss/macaddrsetup" remote="sony" revision="bd7ce4eb762bb76cfddb4d4268352f8d3a71edd9" upstream="master"/>
   <project name="packages-apps-FMRadio" path="packages/apps/FMRadio" remote="sony" revision="680e46c71260e0bbd9517b82a9b7be7902745698" upstream="master"/>
   <project name="packages_apps_ExtendedSettings" path="packages/apps/ExtendedSettings" remote="sony" revision="bce1ff54637ab17b5b2bd4b1eb37016b00613a82" upstream="master"/>
   <project name="platform/art" path="art" revision="7f13ce4d95e2f8e38a82021058025509b7e994df" upstream="refs/tags/android-8.1.0_r35"/>
-  <project name="android_bionic" path="bionic" remote="hybris-patches" revision="7136d0c7e1ece8e5d020ba446d447f4e10b06f6d" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_bionic" path="bionic" remote="hybris-patches" revision="38b435affd2d61bff7e768c1f5cb77cdc581ca66" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="platform/bootable/recovery" path="bootable/recovery" revision="ec958fd4ee7a60bae0f980a78a146402316b0b9f" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/build" path="build/make" revision="7f5de013859ccdb83993a6a9bb39195dc2d2f7dd" upstream="refs/tags/android-8.1.0_r35">
     <copyfile dest="Makefile" src="core/root.mk"/>
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
@@ -354,8 +348,8 @@
   <project name="platform/external/zlib" path="external/zlib" revision="5ce335946fc078f2273cf7bd7ade9b304d816c58" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/external/zopfli" path="external/zopfli" revision="069cb023c39358bc0e1b3dc0397b8fcdd84b4d44" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/external/zxing" path="external/zxing" revision="fedf8f2d8099bf7bb85dc3db8699343d56617deb" upstream="refs/tags/android-8.1.0_r35"/>
-  <project name="platform/frameworks/av" path="frameworks/av" revision="08f6204768cb6a87c8baa05a3fef99d3241952b8" upstream="refs/tags/android-8.1.0_r35"/>
-  <project name="platform/frameworks/base" path="frameworks/base" revision="20e97827de0f96c52168b6938494091cb851aa5d" upstream="refs/tags/android-8.1.0_r35"/>
+  <project name="android_frameworks_av" path="frameworks/av" remote="hybris-patches" revision="4ff38ba524f15ad22fb77886e8876ab4b0720856" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_frameworks_base" path="frameworks/base" remote="hybris-patches" revision="ccf58ec225da75a0df4f17aa09478c633e73f2e4" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
   <project name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" revision="8d1f0d7f4a9fe6611b2a435993e2642250f8bc9b" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" revision="821f636d0b881a930cfc284d4d82ae39862d3a3b" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/frameworks/compile/slang" path="frameworks/compile/slang" revision="6a436c154e7942c76a84d937d0df02e575286d81" upstream="refs/tags/android-8.1.0_r35"/>
@@ -398,9 +392,14 @@
   <project name="platform/hardware/invensense" path="hardware/invensense" revision="11e5ff75af866f91622b6008fa13db1c3685ae69" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/hardware/libhardware" path="hardware/libhardware" revision="12dd5a3dc35bb6ae7dd8ee29f91b34e90034453b" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" revision="7e46cfffd8c8db9547b4717b8408dd9b0cb83f29" upstream="refs/tags/android-8.1.0_r35"/>
-  <project name="platform/hardware/qcom/bootctrl" path="hardware/qcom/bootctrl" revision="2f294e58e7ed7d788d35569022f59cc9fd0d3e30" upstream="refs/tags/android-8.1.0_r35"/>
+  <project name="android_hardware_qcom_audio" path="hardware/qcom/audio" remote="hybris-patches" revision="6799cef121d65bb9a8318ba591d761af2ca4b3cd" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_hardware_qcom_bootctrl" path="hardware/qcom/bootctrl" remote="hybris-patches" revision="8cc0bacc67fc335d4ef9834f5db5cf56caa90bc2" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_hardware_qcom_bt" path="hardware/qcom/bt" remote="hybris-patches" revision="3556cb7ed37ff75d7f36f0d251d4452c2626fc11" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
   <project name="platform/hardware/qcom/data/ipacfg-mgr" path="hardware/qcom/data/ipacfg-mgr" revision="da0af80f9a1eba30270e58efeac9481c4dabdc46" upstream="refs/tags/android-8.1.0_r35"/>
+  <project name="android_hardware_qcom_display" path="hardware/qcom/display" remote="hybris-patches" revision="9a27aff4f92fdcab7aed10ddb1093d0e8aa184fc" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_hardware_qcom_gps" path="hardware/qcom/gps" remote="hybris-patches" revision="10620a26c0802f57ba271f77b4be8d83e481a3e8" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
   <project name="platform/hardware/qcom/keymaster" path="hardware/qcom/keymaster" revision="b9d7a35c05cac901a65d09849f90f1b4146d10e8" upstream="refs/tags/android-8.1.0_r35"/>
+  <project name="android_hardware_qcom_media" path="hardware/qcom/media" remote="hybris-patches" revision="69e0fa4bf52bff022333a2b31e239ec50ded33b5" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
   <project name="platform/hardware/qcom/msm8998" path="hardware/qcom/msm8998" revision="4d554ba927d41caac6128d731b66e6d593b27514" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/hardware/qcom/power" path="hardware/qcom/power" revision="3a098ee1f89c398b9d6e7b5dfae9c694994f8bc4" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan" revision="8b94981ce47caac688d27fe222c3ce18b046e1ab" upstream="refs/tags/android-8.1.0_r35"/>
@@ -502,9 +501,16 @@
   <project clone-depth="1" name="platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="88fa20009d5581163b4656d52e2fcc1f56042da6" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/checkcolor" path="prebuilts/checkcolor" revision="f6f661b424f646bc5ddf9e1b1e644abb492b7547" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/checkstyle" path="prebuilts/checkstyle" revision="a8a50e922b39a2dba7e56030c660e1aabca168f3" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86" revision="f59dae743731eef0cf012408603291c253eed5c3" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="ce80566d209ef0fba56e5bd4cc4cf11435f83a71" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/prebuilts/deqp" path="prebuilts/deqp" revision="c208ecfb707600b86a79031291bf48b220f0610e" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/devtools" path="prebuilts/devtools" revision="2538644348d06278149f8f918930d058cb4f32a7" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" revision="e03deb549aaf9281795cab7d4970fdb165d21734" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" revision="6d08ca9f45ff685648fd13c75bf5cac4b11c19bb" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" revision="f86db688fb0eec398fd33594609ecfb258c1fa1e" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" revision="ec5aa66aaa4964c27564d0ec84dc1f18a2d72b7e" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" path="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" revision="d942564c9331f07026a8f78502d8571206eb7be4" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" revision="576c22f0b05206afd4f0f01bc36f9c0904ae7ebe" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="7a28c220c2e9001825328dca6188ef0077a80a88" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" revision="26e93f6af47f7bd3a9beb5c102a5f45e19bfa38a" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="c348b64ea1e2015a576485aa787dc70dda9ef396" upstream="refs/tags/android-8.1.0_r35"/>
@@ -513,7 +519,9 @@
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" revision="e76a9a506d7ad132f107eb2f7c27b6a8ccb68b91" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" revision="388fdc4995d374d76a0c4b292afabac91638e134" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" revision="ba87ed00b06d1dbec5e68abdb9110c914ea006c6" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/gdb/darwin-x86" path="prebuilts/gdb/darwin-x86" revision="0a8c90248264a8b26970b4473770bcc3df8515fe" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/gdb/linux-x86" path="prebuilts/gdb/linux-x86" revision="4adfde8bc82dd39f59e0445588c3e599ada477d2" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/go/darwin-x86" path="prebuilts/go/darwin-x86" revision="d240e4f742d2799a3b4bf1ba4d695d0e28dc9040" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86" revision="9802e351bf16f8137807da945a4bc36371a16be6" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/gradle-plugin" path="prebuilts/gradle-plugin" revision="23dda3312e9a3127eca9c4085a41b5621bc6276d" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/jdk/jdk8" path="prebuilts/jdk/jdk8" revision="68dabb15582c2e86c9a5ef863e193892b7843792" upstream="refs/tags/android-8.1.0_r35"/>
@@ -522,6 +530,7 @@
   <project clone-depth="1" name="platform/prebuilts/maven_repo/bumptech" path="prebuilts/maven_repo/bumptech" revision="268c5495b8003e09173a1ae7b1e9dc9b019e300d" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/misc" path="prebuilts/misc" revision="598387341a7104f2bd46fca3e2c1161bce609de3" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/ndk" path="prebuilts/ndk" revision="3c28f6818fe12e3572dcde6fcb327a4c9362acfd" upstream="refs/tags/android-8.1.0_r35"/>
+  <project clone-depth="1" name="platform/prebuilts/python/darwin-x86/2.7.5" path="prebuilts/python/darwin-x86/2.7.5" revision="0c5958b1636c47ed7c284f859c8e805fd06a0e63" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/python/linux-x86/2.7.5" path="prebuilts/python/linux-x86/2.7.5" revision="49b50adb1a149100905b368570c2cb56cadc0854" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/sdk" path="prebuilts/sdk" revision="8ba944d14b8e1980ed3e8a26db83fde19dc12e50" upstream="refs/tags/android-8.1.0_r35"/>
   <project clone-depth="1" name="platform/prebuilts/tools" path="prebuilts/tools" revision="a001fcbfab0cab392f6d3a311cec27324d3dac6e" upstream="refs/tags/android-8.1.0_r35"/>
@@ -531,7 +540,7 @@
   <project name="platform/system/chre" path="system/chre" revision="ee15d36625961122e50cfea5333b581ea9297e9f" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/connectivity/wificond" path="system/connectivity/wificond" revision="9828014fd83005fbc305c535500406612b58f287" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/connectivity/wifilogd" path="system/connectivity/wifilogd" revision="7f63780db20de42556d24704fabc3679569a2528" upstream="refs/tags/android-8.1.0_r35"/>
-  <project name="platform/system/core" path="system/core" revision="baeefd243f480bbbc22e36a3ae981b4cfd91efe8" upstream="refs/tags/android-8.1.0_r35"/>
+  <project name="android_system_core" path="system/core" remote="hybris-patches" revision="685de7084a26a7c297b95baf579d08f8d4044add" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
   <project name="platform/system/extras" path="system/extras" revision="de5a53756212bc518d2a3aa433d90e1b22efa7af" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/gatekeeper" path="system/gatekeeper" revision="e21a73530e490999057921c5aad86226967a71a1" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/hardware/interfaces" path="system/hardware/interfaces" revision="a741a1eaec60b94b00807f9e7c23729545cbd32a" upstream="refs/tags/android-8.1.0_r35"/>
@@ -544,6 +553,7 @@
   <project name="platform/system/libvintf" path="system/libvintf" revision="9db9b147602210e6ae4b40848c49a7bfeeaefcff" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/media" path="system/media" revision="75e3545d978315d1988221181c7506c06b33a8ae" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/netd" path="system/netd" revision="cb160d358263b4cd5aca3d54521355a6737828a2" upstream="refs/tags/android-8.1.0_r35"/>
+  <project name="android_system_nfc" path="system/nfc" remote="hybris-patches" revision="c11bdf5eb41f39a350a0d5788a3ba5be576a87ec" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
   <project name="platform/system/nvram" path="system/nvram" revision="a2cbda182e4631dc45b3e988db9a6c0a0c36a610" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/security" path="system/security" revision="8b84e6d77fbd69a71fb051f21eb64b597927cbb1" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/sepolicy" path="system/sepolicy" revision="bd143923ddea313bee84042e8320b5fa8eb4051e" upstream="refs/tags/android-8.1.0_r35"/>
@@ -552,7 +562,7 @@
   <project name="platform/system/tools/hidl" path="system/tools/hidl" revision="12840dc2ec1cf3a3ab1277358522fe947697ba97" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/tpm" path="system/tpm" revision="987689803d813efb9b011236a7853c8f3edba1f6" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/system/update_engine" path="system/update_engine" revision="6f8aaf31ba5820288a6baa209c4388550b17c87e" upstream="refs/tags/android-8.1.0_r35"/>
-  <project name="platform/system/vold" path="system/vold" revision="9a90d236fb1a2077bd1315f7ec0e41ffe520b3d5" upstream="refs/tags/android-8.1.0_r35"/>
+  <project name="android_system_vold" path="system/vold" remote="hybris-patches" revision="4bf2b9cb173a58f843d9065faf4d99e0779435ca" upstream="droid-src-sony-aosp-8.1.0_r35_20180714"/>
   <project name="platform/test/framework" path="test/framework" revision="246492cf54d880214952e9cbb1ea490cbdd56f52" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/test/sts" path="test/sts" revision="3eba682e689d9278e339331b8e51c8f2100a99fe" upstream="refs/tags/android-8.1.0_r35"/>
   <project name="platform/test/vts" path="test/vts" revision="b19555a73f042d08cf528c32e6f68faba15b7dff" upstream="refs/tags/android-8.1.0_r35"/>
@@ -581,7 +591,7 @@
   <project name="transpower" path="vendor/oss/transpower" remote="sony" revision="7d1dd74c64a7bc2c8d3d01097450c007973fdcec" upstream="master"/>
   <project name="vendor-broadcom-bt-fm" path="vendor/broadcom/bt-fm" remote="sony" revision="2da2991694277c0e29782fbadffe69027adeb09a" upstream="master"/>
   <project name="vendor-broadcom-wlan" path="vendor/broadcom/wlan" remote="sony" revision="3804258b2d466f907f886e34787e6b8cdcf7236a" upstream="master"/>
-  <project name="vendor-nxp" path="vendor/nxp/" remote="sony" revision="08cfed8a9711116edd96ffc91b0d85f0af737cbb" upstream="master"/>
+  <project name="vendor-nxp" path="vendor/nxp/" remote="sony" revision="b1e4fc83b8b9fb16db08d3df2af02a4ac3d8ad27" upstream="master"/>
   <project name="vendor-qcom-opensource-dataservices" path="vendor/qcom/opensource/dataservices" remote="sony" revision="ee5fafdae0a9daecb2b801466fcb65969e4219fb" upstream="master"/>
   <project name="vendor-qcom-opensource-fm" path="vendor/qcom/opensource/fm" remote="sony" revision="aabbad189c592aa67facec37bb4d52eb5f991738" upstream="master"/>
   <project name="vendor-qcom-opensource-interfaces" path="vendor/qcom/opensource/interfaces" remote="sony" revision="ed3af2f12b3ed388029e471791313a8264bc8d6a" upstream="aosp/LA.UM.6.3.r1">
@@ -591,8 +601,9 @@
   <project name="vendor-qcom-opensource-wlan-fw-api" path="kernel/sony/msm-4.4/kernel/drivers/staging/wlan-qc/fw-api" remote="sony" revision="da68c7f2f560703880d2204c9b050849dfed6aa3" upstream="aosp/LA.UM.6.4.r1"/>
   <project name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" path="kernel/sony/msm-4.4/kernel/drivers/staging/wlan-qc/qca-wifi-host-cmn" remote="sony" revision="3f0e701ec2fd40984c66ddc6b4bb52d6c8a20fc1" upstream="aosp/LA.UM.6.4.r1"/>
   <project name="vendor-qcom-opensource-wlan-qcacld-3.0" path="kernel/sony/msm-4.4/kernel/drivers/staging/wlan-qc/qcacld-3.0" remote="sony" revision="ce1d5f37accf1fa896c9f3b52e89cb643a1e0d98" upstream="aosp/LA.UM.6.4.r1"/>
+  <project clone-depth="1" name="kernel" path="kernel/sony/msm-4.4/common-kernel" remote="sony" revision="e8c10776b71b1301710436d31bac8e099073cf62" upstream="aosp/LA.UM.6.4.r1"/>
   <project name="vendor-sony-oss-cash" path="vendor/oss/cash" remote="sony" revision="05e140369baf3ef98a837ea50b8e44be645b4b90" upstream="master"/>
-  <project name="vendor-sony-oss-fingerprint" path="vendor/oss/fingerprint" remote="sony" revision="40e706159b2715dd281f53dc578d978d747145b3" upstream="master"/>
+  <project name="vendor-sony-oss-fingerprint" path="vendor/oss/fingerprint" remote="sony" revision="95fced0275b9bc667f7c87dd0ec7cb7cbe0242b7" upstream="master"/>
   <project name="vendor-sony-oss-projection" path="vendor/oss/projection" remote="sony" revision="1123d5b827fda74df7032282156af183370b0069" upstream="master"/>
   
   <repo-hooks enabled-list="pre-upload" in-project="platform/tools/repohooks"/>
