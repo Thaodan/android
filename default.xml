@@ -3,6 +3,7 @@
   <remote fetch="https://android.googlesource.com/" name="aosp" review="https://android-review.googlesource.com/"/>
   <remote fetch="https://github.com/mer-hybris/" name="hybris" revision="master"/>
   <remote fetch="https://github.com/krnlyng/" name="krnlyng"/>
+  <remote fetch="https://github.com/thaodan/" name="thaodan"/>
   <remote fetch="https://github.com/mer-hybris/" name="hybris-patches" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
   <remote fetch="https://github.com/NXPNFCProject/" name="NXP"/>
   <remote fetch="https://github.com/sonyxperiadev/" name="sony"/>
@@ -10,7 +11,7 @@
   <default remote="aosp" revision="refs/tags/android-8.1.0_r35" sync-j="4"/>
 
   <project name="device-sony-nile" path="device/sony/nile" remote="hybris-patches" revision="hybris-sony-aosp-8.1.0_r35_20180714" />
-  <project name="android_kernel_sony_msm" path="kernel/sony/msm-4.4/kernel" remote="hybris-patches" revision="hybris-sony-aosp-8.1.0_r35_20180714"/>
+  <project name="android_kernel_sony_msm" path="kernel/sony/msm-4.4/kernel" remote="thaodan" revision="hybris-sony-aosp-8.1.0_r35_20180714-discovery"/>
   <project name="droid-hal-sony-nile" path="rpm" remote="hybris" revision="master"/>
   <project name="hybris-boot" path="hybris/hybris-boot" remote="hybris" revision="master"/>
   <project name="mer-kernel-check" path="hybris/mer-kernel-check" remote="hybris" revision="master"/>
