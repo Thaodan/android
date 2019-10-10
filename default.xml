@@ -51,9 +51,6 @@
   <project groups="device" name="exfat" path="vendor/external/exfat" remote="relan" revision="68ba243d5d15854bebe61514217bcff2345d3614"/>
   <project groups="device" name="hardware-qcom-display" path="hardware/qcom/display/sde" remote="sony" revision="aosp/LA.UM.7.3.r1"/>
   <project groups="device" name="hardware-qcom-wlan" path="vendor/qcom/opensource/wlan" remote="sony" revision="master"/>
-  <project groups="device" name="kernel" path="kernel/sony/msm-4.9/kernel" remote="sony" revision="aosp/LE.UM.2.3.2.r1.4"/>
-  <project groups="device" name="kernel-defconfig" path="kernel/sony/msm-4.9/kernel/arch/arm64/configs/sony" remote="sony" revision="aosp/LE.UM.2.3.2.r1.4"/>
-  <project clone-depth="1" groups="device" name="kernel-sony-msm-4.9-common" path="kernel/sony/msm-4.9/common-kernel" remote="sony" revision="aosp/LE.UM.2.3.2.r1.4"/>
   <project groups="vts,pdk" name="kernel/configs"/>
   <project groups="device" name="macaddrsetup" path="vendor/oss/macaddrsetup" remote="sony" revision="master"/>
   <project groups="device" name="packages_apps_ExtendedSettings" path="packages/apps/ExtendedSettings" remote="sony" revision="p-mr1"/>
@@ -696,9 +693,6 @@
     <copyfile dest="vendor/qcom/opensource/Android.bp" src="os_pickup.bp"/>
   </project>
   <project groups="device" name="vendor-qcom-opensource-location" path="vendor/qcom/opensource/location" remote="sony" revision="p-mr0"/>
-  <project groups="device" name="vendor-qcom-opensource-wlan-fw-api" path="kernel/sony/msm-4.9/kernel/drivers/staging/wlan-qc/fw-api" remote="sony" revision="aosp/LA.UM.7.3.r1"/>
-  <project groups="device" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" path="kernel/sony/msm-4.9/kernel/drivers/staging/wlan-qc/qca-wifi-host-cmn" remote="sony" revision="aosp/LA.UM.7.3.r1"/>
-  <project groups="device" name="vendor-qcom-opensource-wlan-qcacld-3.0" path="kernel/sony/msm-4.9/kernel/drivers/staging/wlan-qc/qcacld-3.0" remote="sony" revision="aosp/LA.UM.7.3.r1"/>
   <project groups="device" name="vendor-sony-oss-cash" path="vendor/oss/cash" remote="sony" revision="master"/>
   <project groups="device" name="vendor-sony-oss-fingerprint" path="vendor/oss/fingerprint" remote="sony" revision="master"/>
   <project groups="device" name="vendor-sony-oss-projection" path="vendor/oss/projection" remote="sony" revision="master"/>

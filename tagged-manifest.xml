@@ -51,9 +51,6 @@
   <project groups="device" name="exfat" path="vendor/external/exfat" remote="relan" revision="68ba243d5d15854bebe61514217bcff2345d3614"/>
   <project groups="device" name="hardware-qcom-display" path="hardware/qcom/display/sde" remote="sony" revision="57ec8c75b7e41b14c151476cdb11d1910a043e6b" upstream="aosp/LA.UM.7.3.r1"/>
   <project groups="device" name="hardware-qcom-wlan" path="vendor/qcom/opensource/wlan" remote="sony" revision="6351125ec900f421276213a2a0d336cfc6268042" upstream="master"/>
-  <project groups="device" name="kernel" path="kernel/sony/msm-4.9/kernel" remote="sony" revision="f6b931bb01edd32dfffe8296cdbad4496ada23da" upstream="aosp/LE.UM.2.3.2.r1.4"/>
-  <project groups="device" name="kernel-defconfig" path="kernel/sony/msm-4.9/kernel/arch/arm64/configs/sony" remote="sony" revision="0132b42171f5ce81f1f417abe6209fd08a44ad12" upstream="aosp/LE.UM.2.3.2.r1.4"/>
-  <project clone-depth="1" groups="device" name="kernel-sony-msm-4.9-common" path="kernel/sony/msm-4.9/common-kernel" remote="sony" revision="c7ce1244500c974ebca1a89805e39c0744b0a2af" upstream="aosp/LE.UM.2.3.2.r1.4"/>
   <project groups="vts,pdk" name="kernel/configs" revision="f65b344e69ebe936d3148cfb56d446e35e4dce17" upstream="refs/tags/android-9.0.0_r46"/>
   <project groups="device" name="macaddrsetup" path="vendor/oss/macaddrsetup" remote="sony" revision="d875174a2b1662d309bbaba7060f7d51cb39aba2" upstream="master"/>
   <project groups="device" name="packages_apps_ExtendedSettings" path="packages/apps/ExtendedSettings" remote="sony" revision="58a6df78c6c477c7d8f710aa83289dc152f49bb4" upstream="p-mr1"/>
@@ -696,9 +693,6 @@
     <copyfile dest="vendor/qcom/opensource/Android.bp" src="os_pickup.bp"/>
   </project>
   <project groups="device" name="vendor-qcom-opensource-location" path="vendor/qcom/opensource/location" remote="sony" revision="308f9af1df35937aaceb69117ce0d2244e282b49" upstream="p-mr0"/>
-  <project groups="device" name="vendor-qcom-opensource-wlan-fw-api" path="kernel/sony/msm-4.9/kernel/drivers/staging/wlan-qc/fw-api" remote="sony" revision="fe41c8d61e096501b8de937dac684008d667b8a7" upstream="aosp/LA.UM.7.3.r1"/>
-  <project groups="device" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" path="kernel/sony/msm-4.9/kernel/drivers/staging/wlan-qc/qca-wifi-host-cmn" remote="sony" revision="8becfc0299c98d8d509de53773e732714ec16148" upstream="aosp/LA.UM.7.3.r1"/>
-  <project groups="device" name="vendor-qcom-opensource-wlan-qcacld-3.0" path="kernel/sony/msm-4.9/kernel/drivers/staging/wlan-qc/qcacld-3.0" remote="sony" revision="8dcf1fbf8bbfadbe6fbad47f9b9389f41221477d" upstream="aosp/LA.UM.7.3.r1"/>
   <project groups="device" name="vendor-sony-oss-cash" path="vendor/oss/cash" remote="sony" revision="b47a64eaa434ab3121720df01f7be40222cd2ea9" upstream="master"/>
   <project groups="device" name="vendor-sony-oss-fingerprint" path="vendor/oss/fingerprint" remote="sony" revision="ab0d04393c95bb1436f61a65b5a8f9829bd5ad68" upstream="master"/>
   <project groups="device" name="vendor-sony-oss-projection" path="vendor/oss/projection" remote="sony" revision="ea763867a7fa1b859d310d08fac4fd4763f0b39a" upstream="master"/>
