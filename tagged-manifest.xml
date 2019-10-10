@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="https://github.com/NXPNFCProject/" name="NXP"/>
-  <remote fetch=".." name="aosp" review="https://android-review.googlesource.com/"/>
+  <remote fetch="https://android.googlesource.com/" name="aosp" review="https://android-review.googlesource.com/"/>
   <remote fetch="https://github.com/relan/" name="relan"/>
   <remote fetch="https://github.com/sonyxperiadev/" name="sony"/>
   
