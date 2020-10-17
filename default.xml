@@ -5,7 +5,7 @@
   <remote fetch="https://github.com/relan/" name="relan"/>
   <remote fetch="https://github.com/sonyxperiadev/" name="sony"/>
   
-  <default remote="aosp" revision="refs/tags/android-9.0.0_r46" sync-j="4"/>
+  <default remote="aosp" revision="refs/tags/android-9.0.0_r61" sync-j="4"/>
   
   <project groups="device" name="NXPNFCC_FW" path="vendor/nxp/NXPNFCC_FW" remote="NXP" revision="master"/>
   <project groups="device" name="QcRilAm" path="vendor/oss/qcrilam" remote="sony" revision="master"/>
