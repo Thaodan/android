@@ -673,30 +673,30 @@
   <project groups="pdk" name="platform/tools/test/connectivity" path="tools/test/connectivity"/>
   <project groups="pdk,tradefed" name="platform/tools/tradefederation" path="tools/tradefederation/core"/>
   <project groups="pdk,tradefed" name="platform/tools/tradefederation/contrib" path="tools/tradefederation/contrib"/>
-  <project groups="device" name="release-keys" path="vendor/oss/release-keys" remote="sony" revision="master"/>
+  <project groups="device" name="release-keys" path="vendor/oss/release-keys" remote="sony" revision="p-mr1"/>
   <project groups="device" name="repo_update" path="vendor/oss/repo_update" remote="sony" revision="android-9.0.0_r46">
     <linkfile dest="repo_update.sh" src="repo_update.sh"/>
   </project>
-  <project groups="device" name="thermanager" path="vendor/oss/thermanager" remote="sony" revision="master"/>
-  <project groups="device" name="timekeep" path="vendor/oss/timekeep" remote="sony" revision="master"/>
+  <project groups="device" name="thermanager" path="vendor/oss/thermanager" remote="sony" revision="p-mr1"/>
+  <project groups="device" name="timekeep" path="vendor/oss/timekeep" remote="sony" revision="p-mr1"/>
   <project name="toolchain/benchmark"/>
   <project groups="pdk" name="toolchain/binutils"/>
   <project groups="pdk" name="toolchain/pgo-profiles"/>
-  <project groups="device" name="transpower" path="vendor/oss/transpower" remote="sony" revision="master"/>
-  <project groups="device" name="vendor-broadcom-bt-fm" path="vendor/broadcom/bt-fm" remote="sony" revision="master"/>
+  <project groups="device" name="transpower" path="vendor/oss/transpower" remote="sony" revision="android-9.0.0_r46"/>
+  <project groups="device" name="vendor-broadcom-bt-fm" path="vendor/broadcom/bt-fm" remote="sony" revision="p-mr1"/>
   <project groups="device" name="vendor-broadcom-wlan" path="vendor/broadcom/wlan" remote="sony" revision="master"/>
-  <project groups="device" name="vendor-nxp" path="vendor/nxp/" remote="sony" revision="master"/>
-  <project groups="device" name="vendor-oss-interfaces" path="vendor/oss/interfaces" remote="sony" revision="master"/>
-  <project groups="device" name="vendor-qcom-opensource-bluetooth" path="vendor/qcom/opensource/bluetooth" remote="sony" revision="master"/>
-  <project groups="device" name="vendor-qcom-opensource-dataservices" path="vendor/qcom/opensource/dataservices" remote="sony" revision="master"/>
+  <project groups="device" name="vendor-nxp" path="vendor/nxp/" remote="sony" revision="p-mr1"/>
+  <project groups="device" name="vendor-oss-interfaces" path="vendor/oss/interfaces" remote="sony" revision="p-mr1"/>
+  <project groups="device" name="vendor-qcom-opensource-bluetooth" path="vendor/qcom/opensource/bluetooth" remote="sony" revision="p-mr1"/>
+  <project groups="device" name="vendor-qcom-opensource-dataservices" path="vendor/qcom/opensource/dataservices" remote="sony" revision="p-mr1"/>
   <project groups="device" name="vendor-qcom-opensource-interfaces" path="vendor/qcom/opensource/interfaces" remote="sony" revision="aosp/LA.UM.7.3.r1">
     <copyfile dest="vendor/qcom/opensource/Android.bp" src="os_pickup.bp"/>
   </project>
   <project groups="device" name="vendor-qcom-opensource-location" path="vendor/qcom/opensource/location" remote="sony" revision="p-mr0"/>
   <project groups="device" name="vendor-sony-oss-cash" path="vendor/oss/cash" remote="sony" revision="master"/>
-  <project groups="device" name="vendor-sony-oss-fingerprint" path="vendor/oss/fingerprint" remote="sony" revision="master"/>
-  <project groups="device" name="vendor-sony-oss-projection" path="vendor/oss/projection" remote="sony" revision="master"/>
-  <project groups="device" name="vendor-sony-oss-simdetect" path="vendor/oss/simdetect" remote="sony" revision="master"/>
+  <project groups="device" name="vendor-sony-oss-fingerprint" path="vendor/oss/fingerprint" remote="sony" revision="p-mr1"/>
+  <project groups="device" name="vendor-sony-oss-projection" path="vendor/oss/projection" remote="sony" revision="p-mr1"/>
+  <project groups="device" name="vendor-sony-oss-simdetect" path="vendor/oss/simdetect" remote="sony" revision="p-mr1"/>
   
   <repo-hooks enabled-list="pre-upload" in-project="platform/tools/repohooks"/>
 </manifest>
