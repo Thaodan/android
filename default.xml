@@ -6,11 +6,12 @@
   <remote fetch="https://github.com/mer-hybris/" name="sony-patches" revision="droid-src-sony-aosp-8.1.0_r52_20190206"/>
   <remote fetch="https://github.com/NXPNFCProject/" name="NXP"/>
   <remote fetch="https://github.com/sonyxperiadev/" name="sony"/>
-  
+  <remote fetch="https://github.com/thaodan/" name="thaodan"/>
+
   <default remote="aosp" revision="refs/tags/android-8.1.0_r52" sync-j="4"/>
 
   <project name="device-sony-nile" path="device/sony/nile" remote="hybris-patches"/>
-  <project name="android_kernel_sony_msm" path="kernel/sony/msm-4.4/kernel" remote="hybris-patches"/>
+  <project name="android_kernel_sony_msm" path="kernel/sony/msm-4.4/kernel" remote="thaodan" branch="hybris-sony-aosp-8.1.0_r52_20190206_fernmelder"/>
   <project name="droid-hal-sony-nile" path="rpm" remote="hybris" revision="master"/>
   <project name="hybris-boot" path="hybris/hybris-boot" remote="hybris" revision="master"/>
   <project name="mer-kernel-check" path="hybris/mer-kernel-check" remote="hybris" revision="master"/>
