@@ -6,6 +6,7 @@
   <remote fetch="https://github.com/mer-hybris/" name="sony-patches" revision="sony-aosp-6.0.1_r80-20170902"/>
   <remote fetch="https://github.com/mer-hybris/" name="sailfish-policy" revision="master"/>
   <remote fetch="https://github.com/sonyxperiadev/" name="sony"/>
+  <remote fetch="https://github.com/thaodan/" name="thaodan"/>
   <remote fetch="https://github.com/NXPNFCProject/" name="NXP"/>
   <remote fetch="https://android.googlesource.com/" name="aosp"/>
 
@@ -23,7 +24,7 @@
   <project path="device/sony/loire" name="device-sony-loire" remote="hybris-patches"/>
   <project path="device/sony/suzu" name="device-sony-suzu" remote="hybris-patches"/>
   <project path="frameworks/native" name="android_frameworks_native" remote="hybris-patches"/>
-  <project path="kernel/sony/msm" name="android_kernel_sony_msm" remote="hybris-patches"/>
+  <project path="kernel/sony/msm" name="android_kernel_sony_msm" remote="thaodan" branch="hybris-sony-aosp-6.0.1_r80-20170902_bleedingtooth_test"/>
   <project path="external/busybox" name="android_external_busybox" remote="hybris-patches"/>
   <project path="system/core" name="android_system_core" remote="hybris-patches"/>
 
