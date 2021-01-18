@@ -7,7 +7,7 @@
   
   <default remote="aosp" revision="refs/tags/android-9.0.0_r46" sync-j="4"/>
   
-  <project groups="device" name="NXPNFCC_FW" path="vendor/nxp/NXPNFCC_FW" remote="NXP" revision="p-mr1"/>
+  <project groups="device" name="NXPNFCC_FW" path="vendor/nxp/NXPNFCC_FW" remote="NXP" revision="master"/>
   <project groups="device" name="QcRilAm" path="vendor/oss/qcrilam" remote="sony" revision="p-mr1"/>
   <project groups="device" name="camera" path="vendor/qcom/opensource/camera" remote="sony" revision="aosp/LA.UM.6.4.r1"/>
   <project groups="device" name="device-sony-akari" path="device/sony/akari" remote="sony" revision="p-mr1"/>
